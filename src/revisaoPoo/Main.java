@@ -1,5 +1,7 @@
 package revisaoPoo;
 
+import revisaoPoo.operacoes.Soma;
+
 import java.util.Scanner;
 
 public class Main {
@@ -30,7 +32,8 @@ public class Main {
 
                 switch (operacao) {
                     case 1: {
-                        resultado = number + number2;
+                        Soma soma = new Soma();
+                        resultado = soma.calcular(number, number2);
                         System.out.println(resultado);
                         break;
                     } case 2: {

@@ -4,17 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        FilaDup<Integer> filaDup = new FilaDup<>();
+        FilaDup<FilaDup<Integer>> filaDup = new FilaDup<>();
 
-        filaDup.enfileirar(10);
-        filaDup.enfileirar(20);
-        filaDup.enfileirar(30);
+        FilaDup<Integer> filaDup1 = new FilaDup<>();
+
+        filaDup.enfileirar(filaDup1);
+        filaDup.enfileirar(filaDup1);
+        filaDup.enfileirar(filaDup1);
 
         System.out.println(filaDup.remover());
         System.out.println(filaDup.remover());
         System.out.println(filaDup.remover());
 
-        filaDup.enfileirar(40);
         System.out.println(filaDup.remover());
     }
 }
